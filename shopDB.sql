@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS `goods` (
+`id` int(11) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `orders` (
+`id` int(11) unsigned NOT NULL,
+  `goodID` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
